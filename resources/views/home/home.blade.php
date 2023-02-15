@@ -61,7 +61,7 @@
           </div>
         </div>
       </div> --}}
-      <div class="row mt-4">
+      {{-- <div class="row mt-4">
         <div class="col-lg-5 mb-lg-0 mb-4">
           <div class="card z-index-2">
             <div class="card-body p-3">
@@ -531,7 +531,31 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
+
+       <img src="{{asset('assets/img/logo_desa.png')}}" style="margin-left: auto;margin-right: auto; margin-top: 40px;margin-bottom: auto;width:14%; display: block;" alt="Tri"> 
+       <h3 style="margin-left: auto;margin-right: auto; margin-top: 10px;margin-bottom: auto;width:97%; display: block; text-align:center" alt="Tri">
+      DESA LIMBANGAN SARI
+      </h3>
+       <h6 style="margin-left: auto;margin-right: auto; margin-top: 2s0px;margin-bottom: auto;width:95%; display: block; text-align:center" alt="Tri">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae suscipit iste ab i
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla sed officiis voluptates nostrum corporis tenetur sunt excepturi animi, distinctio molestiae ipsam ab, in earum at possimus nisi minima vel alias?
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus culpa corrupti ut pariatur quibusdam, nihil esse voluptatibus enim ratione quasi ipsa voluptates id sit aspernatur molestias velit quod nobis qui?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quam vero voluptates eaque aspernatur aperiam tempore, numquam iusto, dolore, aliquid neque pariatur quasi quo magnam repellendus facilis quidem sed dolorum!
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum voluptatem, similique praesentium deserunt amet, suscipit enim consectetur quae ea autem, laudantium natus laborum. Dignissimos expedita assumenda rem dolorum enim delectus!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quos repudiandae! Laboriosam at necessitatibus sunt natus exercitationem velit explicabo alias nemo ipsam! Dolor, tenetur laboriosam numquam illum deserunt velit animi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quae autem molestiae nemo iste reiciendis placeat illo dolorem consectetur vitae, voluptatum, saepe laboriosam nostrum fuga. Provident ex deserunt magnam? Eveniet?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, asperiores. Aliquid animi laudantium maxime doloribus dicta rem accusamus, ipsam vel commodi autem, blanditiis, explicabo nemo ut iste voluptate quod! Quas!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo laborum quas facilis. Amet nemo architecto ipsum tenetur neque sit, quasi, voluptatum debitis vitae unde nulla quis eveniet nihil placeat at.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla sed officiis voluptates nostrum corporis tenetur sunt excepturi animi, distinctio molestiae ipsam ab, in earum at possimus nisi minima vel alias?
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus culpa corrupti ut pariatur quibusdam, nihil esse voluptatibus enim ratione quasi ipsa voluptates id sit aspernatur molestias velit quod nobis qui?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quam vero voluptates eaque aspernatur aperiam tempore, numquam iusto, dolore, aliquid neque pariatur quasi quo magnam repellendus facilis quidem sed dolorum!
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum voluptatem, similique praesentium deserunt amet, suscipit enim consectetur quae ea autem, laudantium natus laborum. Dignissimos expedita assumenda rem dolorum enim delectus!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quos repudiandae! Laboriosam at necessitatibus sunt natus exercitationem velit explicabo alias nemo ipsam! Dolor, tenetur laboriosam numquam illum deserunt velit animi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quae autem molestiae nemo iste reiciendis placeat illo dolorem consectetur vitae, voluptatum, saepe laboriosam nostrum fuga. Provident ex deserunt magnam? Eveniet?
+      
+      </h6>
+
 @endsection
 
 @push('js')

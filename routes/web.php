@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,5 +13,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/',[HomeController::class,'index']);
+Route::get('login',[HomeController::class,'login'])->name('login');
+Route::post('postlogin',[LoginController::class,'postlogin'])->name('postlogin');
+Route::get('logout',[LoginController::class,'logout'])->name('logout');
+/*
+|--------------------------------------------------------------------------
+| Route Beranda
+|--------------------------------------------------------------------------
+*/
+    Route::get('home',[HomeController::class,'index']);
+    Route::get('tables',[HomeController::class,'tables']);
