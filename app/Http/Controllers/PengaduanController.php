@@ -15,8 +15,11 @@ class PengaduanController extends Controller
      */
     public function index()
     {
-        //
+        $pengaduan['pengaduan'] = 
+        Pengaduan::get();
+        return view('pengaduan.index')->with($pengaduan);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -36,7 +39,7 @@ class PengaduanController extends Controller
      */
     public function store(StorePengaduanRequest $request)
     {
-        //
+        dd($request->all());
     }
 
     /**
