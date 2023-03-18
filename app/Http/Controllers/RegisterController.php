@@ -15,7 +15,6 @@ class RegisterController extends Controller
 
     public  function proses(Request $request){
         // dd($request->all());
-
         User::create([
             'name'=> $request->name,
             'username' =>$request->username,

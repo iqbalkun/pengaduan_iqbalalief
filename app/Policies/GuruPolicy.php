@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Petugas;
+use App\Models\Guru;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class PetugasPolicy
+class GuruPolicy
 {
     use HandlesAuthorization;
 
@@ -25,10 +25,10 @@ class PetugasPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Petugas  $petugas
+     * @param  \App\Models\Guru  $guru
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Petugas $petugas)
+    public function view(User $user, Guru $guru)
     {
         //
     }
@@ -48,10 +48,10 @@ class PetugasPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Petugas  $petugas
+     * @param  \App\Models\Guru  $guru
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Petugas $petugas)
+    public function update(User $user, Guru $guru)
     {
         //
     }
@@ -60,10 +60,10 @@ class PetugasPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Petugas  $petugas
+     * @param  \App\Models\Guru  $guru
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Petugas $petugas)
+    public function delete(User $user, Guru $guru)
     {
         //
     }
@@ -72,10 +72,10 @@ class PetugasPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Petugas  $petugas
+     * @param  \App\Models\Guru  $guru
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Petugas $petugas)
+    public function restore(User $user, Guru $guru)
     {
         //
     }
@@ -84,10 +84,10 @@ class PetugasPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Petugas  $petugas
+     * @param  \App\Models\Guru  $guru
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Petugas $petugas)
+    public function forceDelete(User $user, Guru $guru)
     {
         //
     }

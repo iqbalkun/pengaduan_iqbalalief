@@ -13,7 +13,7 @@ class LoginController extends Controller
                 return redirect()->intended('home');   
             }elseif($user->level == '2'){
                 return redirect()->intended('tabelpengaduan');
-            }elseif($user->level == '2'){
+            }elseif($user->level == '3'){
                 return redirect()->intended('home');
             }
         }

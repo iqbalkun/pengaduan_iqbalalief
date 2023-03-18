@@ -1,23 +1,16 @@
 @extends('template.layout')
 
 @push('css')
-    
+<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 @endpush
 
 @section('isi')
 
 
       <div class="row mt-4">
-        <div class="col-lg-5 mb-lg-0 mb-4">
+        <div class="col">
           <div class="card z-index-2">
             <div class="card-body p-3">
-              <div class="bg-gradient-dark border-radius-lg py-3 pe-1 mb-3">
-                <div class="chart">
-                  <canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
-                </div>
-              </div>
-              <h6 class="ms-2 mt-4 mb-0"> Active Users </h6>
-              <p class="text-sm ms-2"> (<span class="font-weight-bolder">+23%</span>) than last week </p>
               <div class="container border-radius-lg">
                 <div class="row">
                   <div class="col-3 py-3 ps-0">
@@ -39,7 +32,7 @@
                       </div>
                       <p class="text-xs mt-1 mb-0 font-weight-bold">users</p>
                     </div>
-                    <h4 class="font-weight-bolder">36</h4>
+                    <h4 class="font-weight-bolder">{{ $ttl_user }}</h4>
                     <div class="progress w-75">
                       <div class="progress-bar bg-dark w-60" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
@@ -65,7 +58,7 @@
                       </div>
                       <p class="text-xs mt-1 mb-0 font-weight-bold">received</p>
                     </div>
-                    <h4 class="font-weight-bolder">2m</h4>
+                    <h4 class="font-weight-bolder">{{ $ttl_pengaduan }}</h4>
                     <div class="progress w-75">
                       <div class="progress-bar bg-dark w-90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
@@ -124,18 +117,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-7">
-          <div class="card z-index-2">
-            <div class="card-header pb-0">
-              <h6>Diagram Pengajuan</h6>
-            </div>
-            <div class="card-body p-3">
-              <div class="chart">
-                <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
       <div class="row my-4">
         <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
@@ -164,7 +146,7 @@
                 <table class="table align-items-center mb-0">
                   <thead>
                     <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama Pekrja</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Jenis Pengaduan</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Members</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Budget</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Completion</th>
@@ -175,28 +157,15 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{{asset('assets')}}/img/small-logos/logo-xd.svg" class="avatar avatar-sm me-3" alt="xd">
+                            <img src="{{asset('assets')}}/img/small-logos/road-solid.svg" class="avatar avatar-sm me-3" alt="xd">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Soft UI XD Version</h6>
+                            <h6 class="mb-0 text-sm">Jalan</h6>
                           </div>
                         </div>
                       </td>
                       <td>
-                        <div class="avatar-group mt-2">
-                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Tompson">
-                            <img src="{{asset('assets')}}/img/team-1.jpg" alt="team1">
-                          </a>
-                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Romina Hadid">
-                            <img src="{{asset('assets')}}/img/team-2.jpg" alt="team2">
-                          </a>
-                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Alexander Smith">
-                            <img src="{{asset('assets')}}/img/team-3.jpg" alt="team3">
-                          </a>
-                          <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jessica Doe">
-                            <img src="{{asset('assets')}}/img/team-4.jpg" alt="team4">
-                          </a>
-                        </div>
+                        <span class="text-xs font-weight-bold"> $14,000 </span>
                       </td>
                       <td class="align-middle text-center text-sm">
                         <span class="text-xs font-weight-bold"> $14,000 </span>
@@ -218,10 +187,10 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{{asset('assets')}}/img/small-logos/logo-atlassian.svg" class="avatar avatar-sm me-3" alt="atlassian">
+                            <img src="{{asset('assets')}}/img/small-logos/money-bill-wave-solid.svg" class="avatar avatar-sm me-3" alt="atlassian">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Add Progress Track</h6>
+                            <h6 class="mb-0 text-sm">Bantuan</h6>
                           </div>
                         </div>
                       </td>
@@ -255,10 +224,10 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{{asset('assets')}}/img/small-logos/logo-slack.svg" class="avatar avatar-sm me-3" alt="team7">
+                            <img src="{{asset('assets')}}/img/small-logos/car-solid.svg" class="avatar avatar-sm me-3" alt="team7">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Fix Platform Errors</h6>
+                            <h6 class="mb-0 text-sm">kemacetan</h6>
                           </div>
                         </div>
                       </td>
@@ -292,10 +261,10 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="{{asset('assets')}}/img/small-logos/logo-spotify.svg" class="avatar avatar-sm me-3" alt="spotify">
+                            <img src="{{asset('assets')}}/img/small-logos/volcano-solid.svg" class="avatar avatar-sm me-3" alt="spotify">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Launch our Mobile App</h6>
+                            <h6 class="mb-0 text-sm">bencana</h6>
                           </div>
                         </div>
                       </td>
@@ -411,11 +380,7 @@
         <div class="col-lg-4 col-md-6">
           <div class="card h-100">
             <div class="card-header pb-0">
-              <h6>Orders overview</h6>
-              <p class="text-sm">
-                <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
-                <span class="font-weight-bold">24%</span> this month
-              </p>
+              <h6>cara mengajukan pengaduan</h6>
             </div>
             <div class="card-body p-3">
               <div class="timeline timeline-one-side">
@@ -424,8 +389,8 @@
                     <i class="ni ni-bell-55 text-success text-gradient"></i>
                   </span>
                   <div class="timeline-content">
-                    <h6 class="text-dark text-sm font-weight-bold mb-0">$2400, Design changes</h6>
-                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">22 DEC 7:20 PM</p>
+                    <h6 class="text-dark text-sm font-weight-bold mb-0">klik Menu Pengajuan</h6>
+                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0"></p>
                   </div>
                 </div>
                 <div class="timeline-block mb-3">
@@ -433,8 +398,7 @@
                     <i class="ni ni-html5 text-danger text-gradient"></i>
                   </span>
                   <div class="timeline-content">
-                    <h6 class="text-dark text-sm font-weight-bold mb-0">New order #1832412</h6>
-                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21 DEC 11 PM</p>
+                    <h6 class="text-dark text-sm font-weight-bold mb-0">Masukan pengajuan </h6>
                   </div>
                 </div>
                 <div class="timeline-block mb-3">
@@ -442,8 +406,7 @@
                     <i class="ni ni-cart text-info text-gradient"></i>
                   </span>
                   <div class="timeline-content">
-                    <h6 class="text-dark text-sm font-weight-bold mb-0">Server payments for April</h6>
-                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21 DEC 9:34 PM</p>
+                    <h6 class="text-dark text-sm font-weight-bold mb-0">menunggu valdasi dari pekerja</h6>
                   </div>
                 </div>
                 <div class="timeline-block mb-3">
@@ -451,8 +414,7 @@
                     <i class="ni ni-credit-card text-warning text-gradient"></i>
                   </span>
                   <div class="timeline-content">
-                    <h6 class="text-dark text-sm font-weight-bold mb-0">New card added for order #4395133</h6>
-                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">20 DEC 2:20 AM</p>
+                    <h6 class="text-dark text-sm font-weight-bold mb-0">tim masuk berangkat ke TKP</h6>
                   </div>
                 </div>
                 <div class="timeline-block mb-3">
@@ -481,5 +443,5 @@
 @endsection
 
 @push('js')
-    
+
 @endpush

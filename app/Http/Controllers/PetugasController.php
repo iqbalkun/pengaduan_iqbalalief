@@ -8,16 +8,28 @@ use App\Http\Requests\UpdatePetugasRequest;
 
 class PetugasController extends Controller
 {
+        public  function index(){
+            
+    $petugas = Petugas::all();
+    return view('petugas.petugas',compact('petugas'));
+    }
+
+
+    // public  function index(){
+    //     return view('petugas.petugas');
+    // }
+
+    // public  function proses(Request $request){
+    //     // dd($request->all());
+
+
+    // }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -36,7 +48,10 @@ class PetugasController extends Controller
      */
     public function store(StorePetugasRequest $request)
     {
-        //
+        // Petugas::create($request->all());
+
+
+        return redirect()->intended('petugas');
     }
 
     /**
@@ -79,8 +94,9 @@ class PetugasController extends Controller
      * @param  \App\Models\Petugas  $petugas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Petugas $petugas)
+    public function destroy($id)
     {
-        //
+        Petugas::find($id)->delete();
+        return redirect('petugas')->with('success','data berhasil dihapus');
     }
 }

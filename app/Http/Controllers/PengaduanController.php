@@ -15,9 +15,10 @@ class PengaduanController extends Controller
      */
     public function index()
     {
-        $pengaduan['pengaduan'] = 
-        Pengaduan::get();
-        return view('pengaduan.index')->with($pengaduan);
+        // $pengaduan['pengaduan'] = 
+        // Pengaduan::get();
+        $pengaduan = Pengaduan::all();
+        return view('pengaduan.index', compact('pengaduan'));
     }
 
 
@@ -39,7 +40,16 @@ class PengaduanController extends Controller
      */
     public function store(StorePengaduanRequest $request)
     {
-        dd($request->all());
+
+        // return $request->tgl_pengaduan;
+        
+        $data = Pengaduan::create($request->all());
+        if($request->hasFile('foto')) {
+            $request->file('foto')->move('fotoPengaduan/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
+        return redirect('pengaduan')->with('success','Data Pengaduan berhasil ditambahkan!');
     }
 
     /**

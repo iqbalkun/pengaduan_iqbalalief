@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('masyarakats', function (Blueprint $table) {
-            $table->char('nik',16)->index();
+        Schema::create('masyarakat', function (Blueprint $table) {
+            $table->char('nik',16)->primary();
             $table->string('nama',35);
             $table->string('username',25);
             $table->string('password',32);
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('masyarakats');
+        Schema::dropIfExists('masyarakat');
     }
 };
