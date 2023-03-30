@@ -21,7 +21,7 @@
           <div class="col">
                 <div class="form-group">
                     <label for="disabledTextInput">NAMA</label>
-                    <input type="text" id="nama" class="form-control" name="name"  >
+                    <input type="text" id="nama" class="form-control" name="nama"  >
                 </div>
                 <div class="form-group">
                     <label for="disabledTextInput">NIP</label>

@@ -22,7 +22,7 @@
       <div class="col-12">
         <div class="card mb-4">
           <div class="card-header pb-0">
-            <h6>Authors table</h6>
+            <h6>guru</h6>
           </div>
           <div class="card-body px-0 pt-0 pb-2">
             <div class="table-responsive p-0">
@@ -75,10 +75,9 @@
     //     })
 
     // })
-          $('#guru').on('show.bs.modal', function(e){
+          $('#guru').on('show.modal', function(e){
             const btn = $(e.relatedTarget)
             // console.log(btn.data('mode'))
-
             const mode = btn.data('mode')
             const nama = btn.data('nama')
             const nip = btn.data('nip')
